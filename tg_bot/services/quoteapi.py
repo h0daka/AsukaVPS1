@@ -8,7 +8,7 @@ import base64
 import random
 from telethon.tl import types 
 from telethon.utils import get_display_name, get_peer_id
-from AsukaRobot.tools import async_searcher, check_filename, json_parser
+from tg_bot.tools import async_searcher, check_filename, json_parser
 from sqlalchemy import Boolean, Column 
 
 try:
