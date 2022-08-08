@@ -2,6 +2,7 @@ import logging
 import os
 import sys
 import time
+import aiohttp
 from typing import List
 import spamwatch
 import telegram.ext as tg
@@ -11,6 +12,11 @@ from configparser import ConfigParser
 from pyrogram import Client, errors
 from ptbcontrib.postgres_persistence import PostgresPersistence
 from logging.config import fileConfig
+from Python_ARQ import ARQ
+from aiohttp import ClientSession
+
+ARQ_API_URL = "https://arq.hamker.in"
+ARQ_API_KEY = "EYMGFY-VLIPEU-YTXHRL-QUSSVR-ARQ"
 
 StartTime = time.time()
 
@@ -155,6 +161,8 @@ dispatcher = updater.dispatcher
 session_name = TOKEN.split(":")[0]
 pgram = Client(session_name, api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
+aiohttpsession = ClientSession()
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 # Load at end to ensure all prev variables have been set
 from tg_bot.modules.helper_funcs.handlers import CustomCommandHandler
