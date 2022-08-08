@@ -8,6 +8,8 @@ from tg_bot.modules.sql import afk_sql as sql
 from tg_bot.modules.users import get_user_id
 from tg_bot.modules.helper_funcs.decorators import kigcmd, kigmsg
 
+AFKVID = "https://telegra.ph/file/c49829f9f5d65947cbc7e.mp4"
+
 @kigmsg(Filters.regex("(?i)^brb"), friendly="afk", group=3)
 @kigcmd(command="afk", group=3)
 def afk(update: Update, context: CallbackContext):
@@ -32,7 +34,8 @@ def afk(update: Update, context: CallbackContext):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
+        update.effective_message.reply_video(
+            AFKVID,caption="Byii Byii! {} {}".format(fname, notice))
     except BadRequest:
         pass
 
@@ -51,14 +54,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} is here!",
-                "{} is back!",
-                "{} is now in the chat!",
-                "{} is awake!",
-                "{} is back online!",
-                "{} is finally here!",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
+                "{} Came Back After Masturbating!",
+                "{}, Hope You Brought Pizza For Us!",
+                "My Darling {}, Is Here!",
+                "{} Don't Trash The Chat!",
+                "{} You're Looking Great Today!",
+                "{} Where Have You Been??",
+                "Welcome Back! {}",
+                "Name Someone Gey??\n{} Might Be Perfect!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(
