@@ -8,6 +8,7 @@ import telegram.ext as tg
 from telethon import TelegramClient
 from telethon.sessions import MemorySession
 from configparser import ConfigParser
+from pyrogram import Client, errors
 from ptbcontrib.postgres_persistence import PostgresPersistence
 from logging.config import fileConfig
 
@@ -148,6 +149,7 @@ else:
     updater = tg.Updater(token=TOKEN, base_url=KInit.BOT_API_URL, base_file_url=KInit.BOT_API_FILE_URL, workers=min(32, os.cpu_count() + 4), request_kwargs={"read_timeout": 10, "connect_timeout": 10})
     
 telethn = TelegramClient(MemorySession(), APP_ID, API_HASH)
+pbot = Client("AsukaRobotpbot", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
 
@@ -166,3 +168,4 @@ def spamfilters(text, user_id, chat_id):
 
     print("This user is a spammer!")
     return True
+
