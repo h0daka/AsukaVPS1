@@ -192,6 +192,10 @@ def decide(update: Update, context: CallbackContext):
     )
     reply_text(random.choice(fun_strings.DECIDE))
 
+@kigcmd(command='cosplay')
+def cosplay(update: Update, context: CallbackContext):
+    update.effective_message.reply_photo(random.choice(fun_strings.COSPLAY))
+    
 
 @kigcmd(command='table')
 def table(update: Update, context: CallbackContext):
