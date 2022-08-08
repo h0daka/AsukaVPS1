@@ -29,7 +29,7 @@ base58
 pytimeparse
 SibylSystem
 
-####AsukaReqs
+
 future
 envparse==0.2.0
 multicolorcaptcha
