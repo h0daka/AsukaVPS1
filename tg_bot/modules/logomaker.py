@@ -318,7 +318,7 @@ async def lego(event):
     pointsize = 500
     fillcolor = "black"
     shadowcolor = "blue"
-    fnt = glob.glob("./AsukaRobot/resources/Vampire Wars.otf")
+    fnt = glob.glob("src/Vampire Wars.otf")
     randf = random.choice(fnt)
     font = ImageFont.truetype(randf, 120)
     w, h = draw.textsize(text, font=font)
