@@ -169,3 +169,18 @@ def spamfilters(text, user_id, chat_id):
     print("This user is a spammer!")
     return True
 
+  #Anilist
+    DOWN_PATH = "anibot/downloads/"
+    TRIGGERS = os.environ.get("TRIGGERS", "/ !").split()
+
+    #ANILISt CREDENTIALS
+    ANILIST_CLIENT = os.environ.get("ANILIST_CLIENT", "8924")
+    ANILIST_SECRET = os.environ.get("ANILIST_SECRET", "uSzYOK7StQWDfjjy2Cf8NUCaifRItajKgLHla0Cv")
+    ANILIST_REDIRECT_URL = os.environ.get("ANILIST_REDIRECT_URL", "https://anilist.co/api/v2/oauth/pin")
+    
+    has_user: bool = False
+    if os.environ.get('USER_SESSION'): 
+        has_user: bool = True
+        user = Client(os.environ.get('USER_SESSION'), api_id=APP_ID, api_hash=API_HASH)
+
+
