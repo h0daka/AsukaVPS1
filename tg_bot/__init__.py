@@ -186,3 +186,5 @@ def spamfilters(text, user_id, chat_id):
         user = Client(os.environ.get('USER_SESSION'), api_id=APP_ID, api_hash=API_HASH)
 
 AS_PTB = (tg.Application.builder().token(TOKEN).build())
+
+    BOT_ID = int(TOKEN.split(":")[0])
