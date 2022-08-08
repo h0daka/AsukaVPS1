@@ -10,9 +10,9 @@ import requests
 from bs4 import BeautifulSoup
 from telegram import InputMediaPhoto, TelegramError
 
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.alternate import typing_action
+from tg_bot import dispatcher
+from tg_bot.modules.disable import DisableAbleCommandHandler
+from tg_bot.modules.helper_funcs.alternate import typing_action
 
 opener = urllib.request.build_opener()
 useragent = (
