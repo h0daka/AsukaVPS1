@@ -29,3 +29,5 @@ pycryptodome
 base58
 pytimeparse
 SibylSystem
+
+pyrogram
