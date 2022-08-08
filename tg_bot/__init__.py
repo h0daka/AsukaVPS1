@@ -152,6 +152,8 @@ telethn = TelegramClient(MemorySession(), APP_ID, API_HASH)
 pbot = Client("AsukaRobotpbot", api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
+session_name = TOKEN.split(":")[0]
+pgram = Client(session_name, api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 
 # Load at end to ensure all prev variables have been set
