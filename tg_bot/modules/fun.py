@@ -6,8 +6,41 @@ import urllib.request
 import urllib.parse
 
 import telegram
-from telegram import ParseMode, Update, ChatPermissions
-from telegram.ext import CallbackContext
+from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions, ParseMode, Update)
+from telegram.error import BadRequest
+from telegram.ext import CallbackContext, run_async
+
+henbuttons = [
+    [
+                        InlineKeyboardButton(
+                             text="Uncensored Hentai",
+                             url="https://t.me/Uncensored_Hemtai"),
+                    ],                
+                   [ 
+                       InlineKeyboardButton(
+                             text="Pornhwa",
+                             url="https://t.me/PornhwaHeaven"),                  
+                       InlineKeyboardButton(
+                             text="Chat",
+                             url="https://t.me/Hentai_Chat_Hanime"),
+                   ],
+    ]
+
+anibuttons = [
+    [
+                        InlineKeyboardButton(
+                             text="Anime Cruise",
+                             url="https://t.me/Anime_Cruise"),
+                    ],                
+                   [ 
+                       InlineKeyboardButton(
+                             text="Index",
+                             url="https://t.me/Cruise_Index"),                  
+                       InlineKeyboardButton(
+                             text="Chat",
+                             url="https://t.me/Anime_Chat_Kaizuryu"),
+                   ],
+    ]
 
 import tg_bot.modules.fun_strings as fun_strings
 from tg_bot.modules.helper_funcs.chat_status import is_user_admin
@@ -169,6 +202,25 @@ def table(update: Update, context: CallbackContext):
     )
     reply_text(random.choice(fun_strings.TABLE))
 
+@kigcmd(command='sex')
+def sex(update: Update, context: CallbackContext):
+    reply_animation = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_animation(random.choice(fun_strings.SEX))
+    
+@kigcmd(command='hemtai')
+def hemtai(update: Update, context: CallbackContext):
+    reply_photo = update.effective_message.reply_to_message.reply_photo if update.effective_message.reply_to_message else update.effective_message.reply_photo
+    reply_photo(photo="https://telegra.ph/file/a01a331e69ab69158482e.jpg", caption=f"• Heyy Pervert!!! Join Below •", 
+    reply_markup=InlineKeyboardMarkup(henbuttons),
+    parse_mode=ParseMode.MARKDOWN,)
+
+@kigcmd(command='animec')
+def animec(update: Update, context: CallbackContext):
+    reply_photo = update.effective_message.reply_to_message.reply_photo if update.effective_message.reply_to_message else update.effective_message.reply_photo
+    reply_photo(photo="https://telegra.ph/file/6deba46d5cc608ba3a59f.jpg", 
+    reply_markup=InlineKeyboardMarkup(anibuttons),
+    parse_mode=ParseMode.MARKDOWN,)    
+    
 
 from tg_bot.modules.language import gs
 
