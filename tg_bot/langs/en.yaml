@@ -1,7 +1,7 @@
 # Language name in their native
 language: "English 🇺🇲"
 # name of people(s) who worked on this translation
-authors: "@dank_as_fuck"
+authors: "@Xelcius"
 
 # languages
 curr_chat_lang: "Hey. Your current language is {}, select the one you want from the buttons below :)"
@@ -9,38 +9,25 @@ set_chat_lang: "Great, {} it is from now on!"
 
 
 pm_start_text: |
-   Hi {}, I'm {},
-   I am an Anime themed group management bot with some fun extras ;)
+   *Hey B!tch {},*
+   *Myself 𝗔𝘀𝘂𝗸𝗮 𝗟𝗮𝗻𝗴𝗹𝗲𝘆 𝗦𝗼𝗿𝘆𝘂, Pilot On Evangelion Unit-02 As Well As A Powerful Group Management Bot.*
+   ❍ *EVA Unit - 02*
+   *Hit The The Help Button To Get List Of My Commands.××*
+   *• @AsukaRobot Powered By* [𝗞𝗮𝗶𝘇𝘂𝗿𝘆𝘂](https://t.me/Kaizuryu)
    
-   I can do a variety of things, most common of em are:
-   - Restrict users with *ban permissions*.
-   - Greet users with media + text and buttons, with proper formatting.
-   - Restrict users who flood your chat using my *anti-flood* module.
-   - *Warn* users according to the options set and restrict em accordingly.
-   - Save notes and filters with proper formatting and reply markup.
-   
-   Theres even more! this is just the tip of the iceberg. Do note I need
-   to be promoted with proper admin permissions to function properly. 
-   Else I won't be able to function as said.
-   
-   *Click on help to learn more!*
-   
-grp_start_text: "Hi, I'm Kigyo."
+grp_start_text: "Hi, I'm Asuka."
 
 pm_help_text: |
-   Hello there! My name is *Kigyo*. A part of *Eagle Union*.
-   I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of
-   the things I can help you with.
-   *Main* commands available:
-    • /start: Starts me, can be used to check I'm alive or not.
-    • /help: PM's you this message.
-    • /language: Change bot language.
-    • /settings:
-      - in PM: will send you your settings for all supported modules.
-      - in a group: will redirect you to pm, with all that chat's settings.
-    Click on the buttons below to get documentation about specific modules!
-
-add_bot_to_group_btn: "Add Kigyo"
+   Hey, *Asuka* here! 
+   I Help Admins To Manage Their Groups!  
+   Main commands available :
+   ‣ /help: PM's you this message.
+   ‣ /help <module name>: PM's you info about that module.
+   ‣ /settings:
+   • in PM: will send you your settings for all supported modules.
+   • in a group: will redirect you to pm, with all that chat's settings.
+   For all command use / or !
+add_bot_to_group_btn: "➕️ Add Asuka To Your Chat ➕️"
 support_chat_link_btn: "Support"
 updates_channel_link_btn: "Updates"
 src_btn: "Source code"
@@ -263,9 +250,9 @@ antispam_help: |
 
      Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect
      you and your groups by removing spam flooders as quickly as possible.
-     *Note:* Users can appeal gbans or report spammers at @YorkTownEagleUnion
+     *Note:* Users can appeal gbans or report spammers at @AsukaSupport
 
-     Kigyo also integrates @Spamwatch API to remove Spammers as much as possible from your chatroom!
+     Asuka also integrates @Spamwatch API to remove Spammers as much as possible from your chatroom!
      *What is SpamWatch?*
      SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters.
      Constantly help banning spammers off from your group automatically So, you wont have to worry about spammers storming your group.
@@ -356,13 +343,6 @@ misc_help: |
       • /cash : currency converter
         example syntax: /cash 1 USD INR
       • /getid : get IDs of chat, user and chat message.
-      ~~~~~~
-      *Last.FM*
-      Share what you're what listening to with the help of this module!
-      *Available commands:*
-      • /setuser <username>: sets your last.fm username.
-      • /clearuser: removes your last.fm username from the bot's database.
-      • /lastfm: returns what you're scrobbling on last.fm.
       ~~~~~~
       *Anti channel*
       Tired of telegram's stupidity? well here you go
@@ -455,13 +435,13 @@ greetings_help: |
        • `/welcomehelp`*:* view more formatting information for custom welcome/goodbye messages.
 
 nation_help: |
-      - /eagle - Lists all Eagle Union members.
+      - /evangs - Lists all Evangelion members.
       - /royals - Lists all Royal Nations.
       - /sakuras - Lists all Sakura Nations.
       - /sardegnas - Lists all Sardegnas Nations.
       - /neptunians - Lists all Neptunia Nations.
       Note: These commands list users with special bot priveleges and can only be used by them.
-      You can visit @YorktownEagleUnion to query more about these.
+      You can visit @AsukaSupport to query more about these.
 
 
 sticker_blacklist_help: |
