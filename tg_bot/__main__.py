@@ -105,8 +105,8 @@ def send_help(chat_id, text, keyboard=None):
         #           InlineKeyboardButton(text='Back', callback_data='start_back'),
         #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
         keyboard = InlineKeyboardMarkup(kb)
-    dispatcher.bot.send_message(
-        chat_id=chat_id, text=text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
+    dispatcher.bot.send_photo(
+        chat_id=chat_id, photo="https://telegra.ph/file/e9e545bc9455a2523997a.jpg", caption=text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
     )
 
 
@@ -140,8 +140,8 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         query = update.callback_query
         if hasattr(query, 'id'):
             first_name = update.effective_user.first_name
-            update.effective_message.edit_text(
-                text=gs(chat.id, "pm_start_text").format(
+            update.effective_message.edit_caption(
+                caption=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
                     OWNER_ID,
@@ -234,8 +234,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
-                text=gs(chat.id, "pm_start_text").format(
+            update.effective_message.reply_photo(
+                photo="https://telegra.ph/file/e9e545bc9455a2523997a.jpg",
+                caption=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
                     OWNER_ID,
@@ -352,8 +353,8 @@ def help_button(update: Update, context: CallbackContext):
                 [InlineKeyboardButton(text="Back", callback_data="help_back"),
                  InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion')]
             )
-            query.message.edit_text(
-                text=text,
+            query.message.edit_caption(
+                caption=text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(help_buttons),
             )
@@ -364,8 +365,8 @@ def help_button(update: Update, context: CallbackContext):
             # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
-            query.message.edit_text(
-                text=gs(chat.id, "pm_help_text"),
+            query.message.edit_caption(
+                caption=gs(chat.id, "pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(kb),
             )
@@ -376,8 +377,8 @@ def help_button(update: Update, context: CallbackContext):
             # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
-            query.message.edit_text(
-                text=gs(chat.id, "pm_help_text"),
+            query.message.edit_caption(
+                caption=gs(chat.id, "pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(kb),
             )
@@ -387,8 +388,8 @@ def help_button(update: Update, context: CallbackContext):
             # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/YorkTownEagleUnion'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
-            query.message.edit_text(
-                text=gs(chat.id, "pm_help_text"),
+            query.message.edit_caption(
+                caption=gs(chat.id, "pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(kb),
             )
